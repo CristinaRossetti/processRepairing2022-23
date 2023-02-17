@@ -7,9 +7,7 @@ path = 'C:/Users/crist/Desktop/FileBDA/risultati_evaluation/nuovi/fineExpNew/fin
 alg = ['knapsack','goldratt_singleton','greedy_singleton']
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
 sub = ['7','14','19','24','28','30','33','50','56','58'] 
-#sub = ['8','26','28','30','37','42','50','55','56','64'] 
-#sub = ['2','4','8','17','18','20','21','22','26','29','31','33','48','63','105']
-#sub = ['29','31','39','52','57','62','71','73','75','77'] 
+
 # Apre il file csv in modalità di scrittura
 with open(path + 'new_count_singleton.csv', 'w', newline="") as f:
     # Crea un oggetto writer
@@ -18,7 +16,7 @@ with open(path + 'new_count_singleton.csv', 'w', newline="") as f:
     # Scrive l'intestazione delle colonne
     writer.writerow(["algoritmo","sub","risorse","archi", "transition", "places","diff_archi","diff_transition","diff_places"])
     rete_originale = 'C:/Users/crist/OneDrive - Università Politecnica delle Marche/Desktop/Magistrale INF/Primo anno/Big Data Analytics e Machine Learning/Progetto_ BDA/ProcessRepairing/patterns_file_fineExp/fineExp_petriNet.pnml'
-    #rete_originale = 'C:/Users/crist/Desktop/FileBDA/TEST FINALI BPI2012 - RISULTATI/TEST FINALI BPI2012 - RISULTATI/bpi2012decompositionExpr_petriNet.pnml'
+
     tree = ET.parse(rete_originale)
     root = tree.getroot()
     arc_count_originale = 0
