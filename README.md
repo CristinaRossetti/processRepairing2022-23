@@ -24,3 +24,7 @@ fineExp_transition_multiple.py (rete fineExp riparata con algoritmi multiple)
 
 Nei files repair_places.py e repair_places_multiple.py viene effettuata un’ulteriore fase di processing in cui si vanno a inserire i marking iniziali nelle reti riparate. Dopodiché, nello stesso file, si effettua l’evaluation. Con un costrutto try … except si cattura l’eccezione che si può verificare nel caso in cui la rete non sia sound, quindi questa non viene valutata. 
 Sono stati divisi i files per gli algoritmi singleton e multiple, poiché questi ultimi generano più reti per ogni risorsa di riparazione e l’iterazione sui files ha richiesto un’ulteriore ciclo sulla variabile count che indica il numero della rete per una determinata risorsa di riparazione.
+I files check_sound.py e check_sound_multiple.py servono a conteggiare il numero di reti non sound ottenute.
+
+---
+Successivamente, è stata eseguita un'ulteriore analisi sulla complessità delle reti. A tal proposito, i files count_singleton.py e count_multiple.py restituiscono in output un file csv dove per ogni rete sono conteggiati gli archi, le transitions e i places ed è calcolata la differenza di questi valori con gli archi, le transitions e i places presenti nella rete originaria.
