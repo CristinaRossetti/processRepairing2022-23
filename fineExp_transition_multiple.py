@@ -31,15 +31,11 @@ from pm4py.objects.petri_net.exporter import exporter as pnml_exporter
 from pm4py.objects.log.exporter.xes import exporter as xes_exporter
 
 sub = ['7','14','19','24','28','30','33','50','56','58']
-#alg = ['goldratt_multiple','greedy_multiple']
 alg = ['greedy_multiple','goldratt_multiple']
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
 
-#import della rete di Petri  
-
 
 import os
-
 
 
 for a in alg: 
