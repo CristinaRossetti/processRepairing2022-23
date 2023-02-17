@@ -32,15 +32,15 @@ from pm4py.objects.log.exporter.xes import exporter as xes_exporter
 from pm4py import write_pnml, read_pnml
 from pm4py.objects.petri_net.obj import Marking
 
+#import dell'event log
 log = xes_importer.apply('C:/Users/crist/OneDrive - Università Politecnica delle Marche/Desktop/Magistrale INF/Primo anno/Big Data Analytics e Machine Learning/Progetto_ BDA/ProcessRepairing/patterns_file_testBankSCCUpdatedCopia/testBank2000SCCUpdatedCopia.xes')
-#sub = ['8','26','28','30','37','42','50','55','56','64']
-sub = ['29','31','39','52','57','62','71','73','75','77'] 
-alg = ['goldratt_singleton','greedy_singleton','knapsack']
-rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
+sub = ['29','31','39','52','57','62','71','73','75','77']  #lista dei numeri dei sottolog 
+alg = ['goldratt_singleton','greedy_singleton','knapsack'] #algoritmi singleton
+rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'] #risorse di riparazione
 
-path = 'C:/Users/crist/Desktop/FileBDA/testbank2000SCCUpdated/'
+path = 'C:/Users/crist/Desktop/FileBDA/testbank2000SCCUpdated/' #path della directory dove prendere le reti riparate
 import os,csv
-f = open(path + '/ALIGN_results_eval_singleton_testBank2000SCCU.csv', 'a')
+f = open(path + '/ALIGN_results_eval_singleton_testBank2000SCCU.csv', 'a') #file csv con i risultati
 writer = csv.writer(f)
 head = ['algorithm','sub','repair resources','fitness', 'precision', 'generalization','semplicity']
 writer.writerow(head)
@@ -49,6 +49,7 @@ for a in alg:
     for s in sub:
         for r in rr:
             net, initial_marking, final_marking = pnml_importer.apply(path + '/'+ a +'/' + 'testlog_' + s +'/' + 'repaired_sub'+ s + '_' + a + '_' + r +'.pnml')
+            #posizionamento dei marking iniziali 
             places = net.places
             arcs=net.arcs
             im= Marking()
@@ -63,8 +64,10 @@ for a in alg:
                     im[place] = 1
                     break
             os.chdir(path + a +'/' + 'testlog_' + s +'/')
+            #memorizzazione nuove reti 
             write_pnml(net, im, final_marking, "new_repaired_sub" + s + "_" + a + "_" + r +".pnml")
             net, initial_marking, final_marking = read_pnml("new_repaired_sub" + s + "_" + a + "_" + r +".pnml")
+            #cattura l'eccezione nel caso in cui la rete non sia sound
             try:
                 fitness = replay_evaluator.apply(log, net, initial_marking, final_marking, variant=replay_evaluator.Variants.ALIGNMENT_BASED)
                 precision = precision_evaluator.apply(log, net, initial_marking, final_marking, variant=precision_evaluator)
