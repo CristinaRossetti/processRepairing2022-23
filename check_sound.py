@@ -16,10 +16,9 @@ from pm4py.evaluation.generalization import evaluator as generalization_evaluato
 from pm4py.evaluation.simplicity import evaluator as simplicity_evaluator
 from pm4py.algo.conformance.alignments import algorithm
 import pm4py.algo.evaluation.replay_fitness
+
 count = 0
-#sub = ['8','26','28','30','37','42','50','55','56','64']
-#sub = ['7','14','19','24','28','30','33','50','56','58'] 
-#sub = ['2','4','8','17','18','20','21','22','26','29','31','33','48','63','105']
+
 sub = ['29','31','39','52','57','62','71','73','75','77'] 
 alg = ['goldratt_singleton','greedy_singleton','knapsack']
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
