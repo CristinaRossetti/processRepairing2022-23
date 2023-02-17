@@ -4,7 +4,6 @@ import pandas as pd
 from pandas.core.common import flatten
 from pm4py.objects.log.util import dataframe_utils
 from pm4py.objects.conversion.log import converter as log_converter
-# from pm4py.objects.log.adapters.pandas import csv_import_adapter as csv_importer #pm4py-1.5.0.1
 from pm4py.objects.log.importer.xes import importer as xes_importer
 from pm4py.objects.petri_net.importer import importer as pnml_importer
 from pm4py.visualization.petri_net import visualizer as petrinet_visualizer
@@ -32,7 +31,6 @@ from pm4py.objects.log.exporter.xes import exporter as xes_exporter
 
 sub = ['8','26','28','30','37','42','50','55','56','64']
 alg = ['goldratt_multiple','greedy_multiple']
-#alg = ['goldratt_multiple']
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
 
 #import della rete di Petri  
