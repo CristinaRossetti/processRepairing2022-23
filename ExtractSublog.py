@@ -4,7 +4,6 @@ import pandas as pd
 from pandas.core.common import flatten
 from pm4py.objects.log.util import dataframe_utils
 from pm4py.objects.conversion.log import converter as log_converter
-# from pm4py.objects.log.adapters.pandas import csv_import_adapter as csv_importer #pm4py-1.5.0.1
 from pm4py.objects.log.importer.xes import importer as xes_importer
 from pm4py.objects.petri_net.importer import importer as pnml_importer
 from pm4py.visualization.petri_net import visualizer as petrinet_visualizer
@@ -47,7 +46,7 @@ def export_eventlog_test(graph_list, log, dict_trace, sub):
     xes_exporter.apply(new_eventlog, '../testlog_' + sub + '.xes')
 
 def list_graph_occurence(sub_ocmatrix_file, subname):
-    # df = csv_importer.import_dataframe_from_path(sub_ocmatrix_file, sep=";")  #pm4py-1.5.0.1
+   
     df = pd.read_csv(sub_ocmatrix_file, sep=';')
     graphs = [] #lista dei grafi che contengono la sub
     for x in range(len(df)): #si iterano i grafi presenti nel file 
@@ -59,9 +58,8 @@ def list_graph_occurence(sub_ocmatrix_file, subname):
 
 pattern = "../patterns_file_testBankSCCUpdatedCopia/"
 dataset = "testBankSCCUpdatedCopia"
-#sub = "testlog_28.xes"
 sub = "64"
-log = xes_importer.apply(pattern + dataset + '.xes') #log = "bpi2012decompositionExpr.xes"
+log = xes_importer.apply(pattern + dataset + '.xes') 
 
 
 def create_dict_trace(name_database):
