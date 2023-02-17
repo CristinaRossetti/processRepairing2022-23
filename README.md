@@ -8,7 +8,7 @@ Il file [ExtractSublog.py](http://ExtractSublog.py) ha l’obiettivo di estrarre
 
 I files riparati sono posizionati nelle directory secondo la seguente logica: la directory più esterna ha il nome della rete originaria, più internamente si hanno tante cartelle quante sono le sub per quella rete. All’interno di ciascuna cartella della sub, abbiamo due casi:
 -per gli algoritmi singleton si hanno le 16 reti riparate
--per gli algoritmi multiple ci sono 16 cartelle, ognuna inerente ad una risorsa di riparazione e in ogni cartella ci sono le varie riparazioni multiple per quella risorsa
+-per gli algoritmi multiple ci sono 16 cartelle, ognuna inerente ad una risorsa di riparazione e in ogni cartella ci sono le varie riparazioni multiple per quella risorsa. Ad esempio, per la risorsa di riparazione 0, la cartella ha nome "r_0".
 
 ---
 
