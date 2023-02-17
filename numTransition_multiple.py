@@ -32,7 +32,6 @@ from pm4py.objects.log.exporter.xes import exporter as xes_exporter
 
 sub = ['29','31','39','52','57','62','71','73','75','77']
 alg = ['goldratt_multiple','greedy_multiple']
-#alg = ['greedy_multiple']
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
 
 #import della rete di Petri  
