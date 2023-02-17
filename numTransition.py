@@ -30,19 +30,12 @@ import argparse
 from pm4py.objects.petri_net.exporter import exporter as pnml_exporter
 from pm4py.objects.log.exporter.xes import exporter as xes_exporter
 
-#import della rete di Petri  
-#net, initial_marking, final_marking = pnml_importer.apply('C:/Users/crist/Desktop/FileBDA/testbank2000SCCUpdated/repairing_77/knapsack/REPAIRED.KNAPSACK.7.214.0.pnml')
-
-
-
 
 
 sub = ['29','31','39','52','57','62','71','73','75','77']
-
-#alg = ['goldtratt_singleton','greedy_singleton','knapsack']
 alg = ['goldratt_singleton','greedy_singleton','knapsack']
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
-#path = 'C:/Users/crist/Desktop/FileBDA/testbank2000SCCUpdated/'
+
 import os
 for a in alg: 
     for s in sub:
