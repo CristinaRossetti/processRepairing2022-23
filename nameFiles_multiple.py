@@ -7,11 +7,8 @@ from pm4py.evaluation.simplicity import evaluator as simplicity_evaluator
 from pm4py.algo.conformance.alignments import algorithm
 import pm4py.algo.evaluation.replay_fitness
 
-sub = ['2','4','8','17','18','20','21','22','26','29','31','33','48','63','105']
-#alg = ['goldtratt_singleton','greedy_singleton','knapsack']
-alg = ['goldratt_singleton','greedy_singleton']
+
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
-#"C:\Users\crist\Desktop\FileBDA\testBank2000NoRandomNoise\goldratt_multiple"
 path = 'C:/Users/crist/Desktop/FileBDA/testbank2000SCCUpdated/goldratt_multiple/testlog_77/'
 
 import os
