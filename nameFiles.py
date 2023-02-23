@@ -8,9 +8,7 @@ from pm4py.algo.conformance.alignments import algorithm
 import pm4py.algo.evaluation.replay_fitness
 
 
-sub = ['8','26','28','30','37','42','50','55','56','64']
-#alg = ['goldtratt_singleton','greedy_singleton','knapsack']
-alg = ['goldratt_singleton']
+alg = ['knapsack']
 rr = ['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
 path = 'C:/Users/crist/Desktop/FileBDA/testbank2000SCCUpdated/knapsack/testlog_77/'
 
